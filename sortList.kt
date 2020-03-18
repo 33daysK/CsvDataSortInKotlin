@@ -1,16 +1,22 @@
 package csv
-/* 引き渡されてきたリストをソートしてソート済みのリストを返却します。
- * ソートの項目名は以下の通りです。
- * sortNumber = 0:number 1:kurasu  2:age  3:score
- * sortOrder  = 0:昇順   1:降順
+/**  
+ *  sortListクラスです。
+ *  
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/18
+ *  引き渡されてきたリストをソートしてソート済みのリストを返却します。
+ *  ソートの項目名は以下の通りです。
+ *  sortNumber = 0:number 1:kurasu  2:age  3:score
+ *  sortOrder  = 0:昇順   1:降順
  *
- * todo: もっとスマートな書き方に直せるなら直したい
+ *  todo: もっとスマートな書き方に直せるなら直したい
  */
 fun sortList(sortNumber: Int, sortOrder: Int, sortList_before: MutableList<Student>){
 	// true = 昇順 、false = 降順 のBoolean変数
 	val sort_in_ascending_order = (sortOrder == 0)
 	var fileName : String
 
+	// sortNumberでまず場合わけして、その後sort_in_ascending_orderでさらに場合わけしています。
 	when(sortNumber){
 		0 -> {
 			if(sort_in_ascending_order){
