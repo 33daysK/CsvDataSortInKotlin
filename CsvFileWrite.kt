@@ -1,10 +1,15 @@
 package csv
-/*
- * ファイルに書き込みをしています
- * .use関数がJavaで言うtry-with-resorceの役割を果たしてくれているため自動的にcloseされます。
- */
+
 import java.io.File
 
+/**  
+ *  csvFileWriteクラスです。
+ *  
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/18
+ *  ファイルに書き込みをしています
+ *  .use関数がJavaで言うtry-with-resorceの役割を果たしてくれているため自動的にcloseされます。
+ */
 fun csvFileWrite (fileName: String, sorted_StudentList: List<Student>){
 
 	var record :String
